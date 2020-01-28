@@ -1,10 +1,130 @@
+<!DOCTYPE html>
+
 <html>
   <head>
+    <!-- /.website title -->
+    <title>Backyard App Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Compiled Styleshits -->
     <link rel="stylesheet" href="assets/app.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" />
+
+    <!-- Compiled Javasctipts -->
     <script src="assets/app.js"></script>
   </head>
-  <body>
-    <%= yield %>
+
+  <body data-spy="scroll" data-target="#navbar-scroll">
+
+      <!-- /.preloader -->
+      <div id="preloader"></div>
+      <div id="top"></div>
+
+      <!-- /.parallax full screen background image -->
+      <div class="fullscreen landing parallax" style="background-image:url('assets/bg.jpg');" data-img-width="2000" data-img-height="1325" data-diff="100">
+
+          <div class="overlay">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-7">
+
+                          <!-- /.logo -->
+                          <div class="logo wow fadeInDown"> <a href=""><img src="assets/logo.png" alt="logo"></a></div>
+                          <!-- /.main title -->
+                          <h1 class="wow fadeInLeft">
+                              Mobile Strategy App
+
+                          </h1>
+
+                          <!-- /.header paragraph -->
+                          <div class="landing-text wow fadeInLeft">
+                              <p>Backyard is a modern and customizable landing page template designed to increase conversion of your product. Backyard is flexible to suit any kind of your business. Try now and join with our happy customers!</p>
+                          </div>
+
+                          <!-- /.header button -->
+                          <div class="head-btn wow fadeInLeft">
+                              <a href="#feature" class="btn-primary">Features</a>
+                              <a href="#subscribe" class="btn-default">Subscribe</a>
+                          </div>
+
+                          <!-- /.phone option -->
+                          <div class="more wow fadeInLeft">
+                              <p>Available for:
+                                  <a href="#download" class="btn option"><i class="fa fa-apple"></i>iOS</a>
+                                  <a href="#download" class="btn option"><i class="fa fa-android"></i>Android</a>
+                              </p>
+                          </div>
+
+                      </div>
+
+                      <!-- /.phone image -->
+                      <div class="col-md-5">
+                          <img src="assets/mobile.png" alt="phone" class="header-phone img-responsive wow fadeInRight">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- NAVIGATION -->
+      <div id="menu">
+          <nav class="navbar-wrapper navbar-default" role="navigation">
+              <div class="container">
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-backyard">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand site-name" href="#top"><img src="assets/logo2.png" alt="logo"></a>
+                  </div>
+
+                  <div id="navbar-scroll" class="collapse navbar-collapse navbar-backyard navbar-right">
+                      <ul class="nav navbar-nav">
+                          <li><a href="#intro">About</a></li>
+                          <li><a href="#feature">Features</a></li>
+                          <li><a href="#subscribe">Subscribe</a></li>
+                          <li><a href="#screenshot">Screenshots</a></li>
+                          <li><a href="#testi">Reviews</a></li>
+                          <li><a href="#download">Download</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+      </div>
+
+      <%= yield %>
+
+      <!-- /.footer -->
+      <footer id="footer">
+          <div class="container">
+              <div class="col-sm-4 col-sm-offset-4">
+                  <!-- /.social links -->
+                  <div class="social text-center">
+                      <ul>
+                          <li><a class="wow fadeInUp" href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                          <li><a class="wow fadeInUp" href="https://www.facebook.com/" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>
+                          <li><a class="wow fadeInUp" href="https://plus.google.com/" data-wow-delay="0.4s"><i class="fa fa-google-plus"></i></a></li>
+                          <li><a class="wow fadeInUp" href="https://instagram.com/" data-wow-delay="0.6s"><i class="fa fa-instagram"></i></a></li>
+                      </ul>
+                  </div>
+                  <div class="text-center wow fadeInUp" style="font-size: 14px;">Copyright Backyard 2015 - Template by  <a href="http://bootstrapthemes.co/" target="_blank">BootstrapThemes</a></div>
+                  <a href="#" class="scrollToTop"><i class="pe-7s-up-arrow pe-va"></i></a>
+              </div>
+          </div>
+      </footer>
+
+      <script type="text/javascript">
+          $( document ).delegate( '*[data-toggle="lightbox"]', 'click', function ( event ) {
+              event.preventDefault();
+              $( this ).ekkoLightbox();
+          } );
+      </script>
+      <script>
+          new WOW().init();
+      </script>
   </body>
 </html>
 
