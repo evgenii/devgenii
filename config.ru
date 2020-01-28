@@ -2,6 +2,7 @@ require 'rubygems'
 require 'bundler'
 Bundler.setup :default
 require 'sinatra/base'
+require 'sinatra/partial'
 require 'sprockets'
 
 require './app'
@@ -17,5 +18,10 @@ map '/assets' do
 end
 
 map '/' do
+  configure do
+    register Sinatra::Partial
+    set :partial_template_engine, :erb
+  end
+
   run Sinatra::Application
 end
