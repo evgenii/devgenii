@@ -68,3 +68,5 @@ yarn-debug.log*
 
 .ruby-version
 .ruby-gemset
+*.sublime-project
+*.sublime-workspace
