@@ -5,5 +5,6 @@ gem 'sinatra-partial'
 
 gem 'sprockets'
 
-gem 'unicorn'
+gem 'rackup'
+gem 'puma'
 

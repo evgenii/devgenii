@@ -3,6 +3,6 @@ Bundler.setup :default
 
 require 'sinatra'
 
-get "/" do
+get '/' do
   erb :index
 end

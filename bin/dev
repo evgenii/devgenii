@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require "fileutils"
+
+# Expand the path to the app directory
+APP_ROOT = File.expand_path("..", __dir__)
+
+def system!(*args)
+  system(*args) || abort("\n== Command #{args} failed ==")
+end
+
+Dir.chdir APP_ROOT do
+  puts "== Starting Sinatra dev server =="
+  system! "bundle exec rackup config.ru"
+end
