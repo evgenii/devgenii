@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+require 'sprockets'
+require 'fileutils'
+
+quiet = ARGV.include?('--quiet')
+
+environment = Sprockets::Environment.new(Dir.pwd)
+environment.append_path 'assets/fonts'
+environment.append_path 'assets/javascripts'
+environment.append_path 'assets/stylesheets'
+environment.append_path 'assets/images'
+
+output_path = File.join(Dir.pwd, 'public', 'assets')
+FileUtils.mkdir_p(output_path)
+
+# Compile JS and CSS manifests (concatenated, no digest fingerprints)
+%w[app.js app.css].each do |logical_path|
+  asset = environment.find_asset(logical_path)
+  next unless asset
+  output_file = File.join(output_path, logical_path)
+  File.write(output_file, asset.source)
+  puts "Compiled #{logical_path}" unless quiet
+end
+
+# Copy fonts and images as-is (no processing needed)
+%w[fonts images].each do |dir|
+  Dir.glob("assets/#{dir}/*").each do |file|
+    next if File.directory?(file)
+    FileUtils.cp(file, output_path)
+    puts "Copied #{File.basename(file)}" unless quiet
+  end
+end
+
+puts "Assets compiled to #{output_path}" unless quiet

@@ -8,3 +8,6 @@ gem 'sprockets'
 gem 'rackup'
 gem 'puma'
 
+group :development do
+  gem 'kamal'
+end

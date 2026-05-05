@@ -1,0 +1,28 @@
+service: devgenii-visit
+image: devapps/devgenii-visit
+
+servers:
+  - evgenii.scw.devapps
+
+proxy:
+  ssl:
+    certificate_pem: BUNDLE_CRT
+    private_key_pem: PRIVATE_KEY
+  host: devgenii-devapps.devgenii.com.ua
+  app_port: 3000
+  healthcheck:
+    path: /up
+
+env:
+  clear:
+    RACK_ENV: production
+    ASSET_PATH: /app/public/assets
+
+registry:
+  server: rg.pl-waw.scw.cloud
+  username: nologin
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+builder:
+  arch: amd64
