@@ -16,7 +16,7 @@ body {
 	margin:0;
 	font-size:16px;
 	line-height: 28px;
-	color: #777; 
+	color: #777;
 	background: #fff;
 	overflow-x:hidden;
 	position: relative;
@@ -30,8 +30,8 @@ h6 { font-size: 1em; line-height:1.2em; }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	text-decoration: none
-}	 
-p { 
+}
+p {
 	padding:0 0 1em;
 	margin:0;
 }
@@ -41,7 +41,7 @@ a {
 	font-weight: bold;
 	-webkit-transition: all .8s ease;
 	transition: all .8s ease;
-} 
+}
 a:hover {
 	text-decoration: none;
 	color: #1f2222;
@@ -51,14 +51,14 @@ a:hover {
 .highlight {
 	color: #3eb0f7;
 }
-#preloader { 
-	position: fixed; 
-	left: 0; 
-	top: 0; 
-	z-index: 999; 
-	width: 100%; 
-	height: 100%; 
-	overflow: visible; 
+#preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	overflow: visible;
 	background: #fff url(loading.gif) no-repeat center center;
 }
 .fullscreen {
@@ -93,8 +93,8 @@ a:hover {
 .navbar-default .navbar-nav > li > a:focus {
     color: #3eb0f7;
 }
-.navbar-default .navbar-nav > .active > a, 
-.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
 	background: transparent;
     color: #3eb0f7;
@@ -152,15 +152,15 @@ a:hover {
 	color: white
 }
 .site-name img{
-	width: 150px; 
+	width: 150px;
 	height: 37px
 }
 .logo {
 	margin: 100px 0 40px 0;
 }
 .logo img{
-	width: 150px; 
-	height: 37px
+	width: 268px;
+	height: 72px
 }
 .landing h1{
 	font-size: 56px;
@@ -176,7 +176,7 @@ a:hover {
 	margin-bottom: 20px;
 }
 .landing-text p {
-	font-size: 17px !important; 
+	font-size: 17px !important;
 }
 .more {
 	margin-bottom: 100px;
@@ -217,9 +217,115 @@ a:hover {
 .intro-pic {
 	margin-top: 20px;
 }
+.intro-pic img {
+	padding-top: 50px;
+}
 .btn-section {
 	padding-top: 20px;
 }
+
+/* Experience carousel */
+#experience-carousel .experience-slide {
+	padding-bottom: 40px;
+}
+#experience-carousel .experience-content {
+	padding-top: 30px;
+}
+#experience-carousel .owl-pagination {
+	display: none;
+}
+#experience-carousel .owl-buttons {
+	display: none;
+}
+.experience-nav {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	gap: 20px;
+	padding: 20px 0 40px;
+}
+.experience-nav-item {
+	background: none;
+	border: 3px solid transparent;
+	border-radius: 8px;
+	padding: 6px;
+	cursor: pointer;
+	opacity: 0.5;
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+	outline: none;
+}
+.experience-nav-item img {
+	display: block;
+	height: 52px;
+	width: auto;
+	max-width: 100px;
+	object-fit: contain;
+}
+.experience-nav-item:hover {
+	opacity: 0.85;
+	border-color: #3eb0f7;
+}
+.experience-nav-item.active {
+	opacity: 1;
+	border-color: #3eb0f7;
+}
+
+/* Shared technology label colours — used across all experience modals */
+.tech-label-rails    { background-color: #cc0000; color: #fff; }
+.tech-label-react    { background-color: #149eca; color: #fff; }
+.tech-label-k8s      { background-color: #326ce5; color: #fff; }
+.tech-label-docker   { background-color: #2496ed; color: #fff; }
+.tech-label-cicd     { background-color: #4caf50; color: #fff; }
+.tech-label-aws      { background-color: #ff9900; color: #111; }
+.tech-label-stripe   { background-color: #635bff; color: #fff; }
+.tech-label-postgres { background-color: #336791; color: #fff; }
+.tech-label-hl7          { background-color: #1ba8a0; color: #fff; }
+.tech-label-api          { background-color: #6c757d; color: #fff; }
+.tech-label-typescript   { background-color: #3178c6; color: #fff; }
+.tech-label-mysql        { background-color: #4479a1; color: #fff; }
+.tech-label-redis        { background-color: #dc382d; color: #fff; }
+.tech-label-rabbitmq     { background-color: #ff6600; color: #fff; }
+.tech-label-helm         { background-color: #0f1689; color: #fff; }
+.tech-label-microservices { background-color: #9c27b0; color: #fff; }
+.tech-label-mobile       { background-color: #34a853; color: #fff; }
+.tech-label-sphinx       { background-color: #e67e22; color: #fff; }
+
+/* Shared experience modal chrome */
+.exp-modal-dialog {
+  width: 70%;
+  max-width: 70vw;
+}
+.exp-modal-body {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+.exp-modal-img {
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  margin-bottom: 12px;
+}
+.exp-modal-footer {
+  padding: 15px;
+  min-height: 0;
+}
+.exp-close-btn {
+  font-size: 13px !important;
+  padding: 5px 14px !important;
+  height: auto !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+@media (max-width: 768px) {
+  .exp-modal-dialog {
+    width: 95%;
+    max-width: 95vw;
+  }
+}
+
 #feature {
 	padding-top: 100px;
 	background: #f6f6f6;
@@ -241,7 +347,7 @@ a:hover {
 .feat-list i {
 	font-size: 48px;
 	float: left;
-	width: 20%;
+	width: 15%;
 	color: #555;
 	height: 100%;
 	position: relative;
@@ -254,7 +360,8 @@ a:hover {
 	-webkit-transition: all .8s ease;
 	transition: all .8s ease;
 }
-#feature .inner {
+#feature .inner,
+.experience-slide .inner {
 	float: left;
 	display: inline-block;
 	width: 80%;
@@ -334,14 +441,14 @@ a:hover {
 .subscribe-form .form-control::-webkit-input-placeholder {
 	color: #333;
 }
-.subscribe-form .form-control:-moz-placeholder { 
-	color: #333;  
+.subscribe-form .form-control:-moz-placeholder {
+	color: #333;
 }
-.subscribe-form .form-control::-moz-placeholder { 
-	color: #333;  
+.subscribe-form .form-control::-moz-placeholder {
+	color: #333;
 }
-.subscribe-form .form-control:-ms-input-placeholder {  
-	color: #333;  
+.subscribe-form .form-control:-ms-input-placeholder {
+	color: #333;
 }
 #screenshot {
 	padding-top: 100px;
@@ -506,7 +613,7 @@ a:hover {
 	width: 195px;
 	position: relative;
 	border-radius: 4px;
-} 
+}
 .iphone {
 	background: #3eb0f7;
 	transition: all 0.3s ease;
@@ -582,11 +689,11 @@ a:hover {
 	background: #3eb0f7;
 }
 .scrollToTop{
-	width: 40px; 
+	width: 40px;
 	height: 40px;
 	padding: 5px;
 	font-size: 30px;
-	text-align: center; 
+	text-align: center;
 	background: rgba(0, 0, 0, 0.2);
 	color: white;
 	position: fixed;
@@ -602,9 +709,9 @@ a:hover {
 	overflow-x: hidden;
 }
 /* iPads (portrait) ----------- */
-@media only screen 
-and (min-width : 768px) 
-and (max-width : 1024px) 
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px)
 and (orientation : portrait) {
 	.more {
 		margin-bottom: 50px;
@@ -638,20 +745,20 @@ and (orientation : portrait) {
 	#client img {
 		margin: 10px 0 10px;
 		max-height: 40px;
-	}	
+	}
 }
 
 /* iPads (landscape) ----------- */
-@media only screen 
-and (min-width : 768px) 
-and (max-width : 1024px) 
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px)
 and (orientation : landscape) {
 	.logo {
 		margin: 100px 0 30px 0;
 	}
 	.landing h1{
 		margin: 60px 0 60px 0;
-	}	
+	}
 	.landing-text {
 		margin: 60px 0 40px 0;
 	}
@@ -666,7 +773,7 @@ and (orientation : landscape) {
 	}
 	.feature-img {
 		margin-top: 30px;
-	}	
+	}
 	.feat-list {
 		margin-top: 10px;
 	}
@@ -678,7 +785,7 @@ and (orientation : landscape) {
 	}
 	#client img {
 		max-height: 45px;
-	}	
+	}
 }
 
 /* smart-phone ----------- */
@@ -710,8 +817,8 @@ and (orientation : landscape) {
 	}
 	#client img {
 		margin: 10px 0 10px;
-	}	
-}	
+	}
+}
 /* iPhone 6Plus (landscape) ----------- */
 @media (max-width: 736px) {
 
@@ -756,7 +863,7 @@ and (orientation : landscape) {
 		margin: 20px 0 10px 0;
 	}
 	.landing-text p {
-		font-size: 16px !important; 
+		font-size: 16px !important;
 	}
 	#intro {
 		padding-top: 50px;
@@ -772,7 +879,7 @@ and (orientation : landscape) {
 	}
 	#screenshot {
 		padding-top: 70px;
-	}	
+	}
 	.screenshots {
 		padding-top: 30px;
 		padding-bottom: 70px;
@@ -788,8 +895,8 @@ and (orientation : landscape) {
 		margin: 50px 0 20px;
 	}
 	.download-text p {
-		line-height: 1.5;	
-	}	
+		line-height: 1.5;
+	}
 	.download-store {
 		padding: 10px 0 70px;
 	}
@@ -818,7 +925,7 @@ and (orientation : landscape) {
 	}
 	.appstorebutton {
 		margin-bottom: 15px;
-	} 
+	}
 	.download-store li {
 		margin-left: 0;
 	}

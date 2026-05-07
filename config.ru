@@ -26,7 +26,9 @@ end
 map '/' do
   configure do
     register Sinatra::Partial
+
     set :partial_template_engine, :erb
+    enable :partial_underscores
   end
 
   run Sinatra::Application

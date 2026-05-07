@@ -1,0 +1,154 @@
+<div class="experience-slide">
+  <div class="row">
+    <div class="col-md-6 intro-pic">
+      <img src="assets/bei-logo.png" alt="BeImmunized" class="img-responsive">
+    </div>
+    <div class="col-md-6 experience-content">
+      <h2>BeImmunized — Family Immunization Tracker</h2>
+      <p>
+        BeImmunized is a US healthcare platform that takes the complexity out of
+        vaccination schedules. It connects parents, physicians, and schools in one
+        place so no one ever misses a shot — or wonders whether they did.
+      </p>
+      <p>
+        I contributed as a full-stack engineer, building core features for record
+        management, physician-patient connectivity, and automated SMS/email
+        notifications, while keeping the system reliable and performant.
+      </p>
+      <button type="button" class="btn-primary" data-toggle="modal" data-target="#beimmunizedModal">
+        Show details
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- BeImmunized Details Modal -->
+<div class="modal fade" id="beimmunizedModal" tabindex="-1" role="dialog" aria-labelledby="beimmunizedModalLabel">
+  <div class="modal-dialog modal-lg bei-modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="beimmunizedModalLabel">BeImmunized — Family Immunization Tracker</h4>
+      </div>
+      <div class="modal-body bei-modal-body">
+
+        <!-- Story section — highlighted -->
+        <div class="bei-modal-story">
+          <div class="row">
+            <div class="col-sm-5">
+              <img src="assets/bei-user.png" alt="Parent using BeImmunized" class="img-responsive bei-modal-img">
+            </div>
+            <div class="col-sm-7">
+              <h4 class="bei-story-title">The Story</h4>
+              <p>Vaccination is important to stay healthy. But do you know how complex it really is?</p>
+              <ul>
+                <li>Dozens of conditions and limitations on what to do — and when</li>
+                <li>Missed-schedule scenarios with no clear guidance</li>
+                <li>Immunization calendars published in non-standardised, hard-to-parse formats</li>
+                <li>No easy way for parents to share records with schools or physicians</li>
+              </ul>
+              <p>
+                Can we automate it and wrap it into a user-friendly app connected to your doctor?
+                Yes, we can — and we did.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <h4>Technologies &amp; Integrations</h4>
+        <p>
+          <span class="label tech-label-rails">Ruby on Rails</span>&nbsp;
+          <span class="label tech-label-mysql">MySQL</span>&nbsp;
+          <span class="label tech-label-redis">Redis</span>&nbsp;
+          <span class="label tech-label-rabbitmq">Resque</span>&nbsp;
+          <span class="label tech-label-sphinx">Sphinx Search</span>&nbsp;
+          <span class="label tech-label-mobile">iOS &amp; Android</span>&nbsp;
+          <span class="label tech-label-api">REST APIs</span>&nbsp;
+          <span class="label tech-label-cicd">CI/CD</span>
+        </p>
+
+        <hr>
+
+        <h4>About the Platform</h4>
+        <div class="row bei-modal-platform">
+          <div class="col-sm-8">
+            <p>
+              BeImmunized is a handy system that keeps every family member's immunization
+              history in one place and makes sure nothing slips through the cracks. The platform
+              serves three distinct user groups under a single roof:
+            </p>
+            <p>
+              <strong>Parents</strong> can manage their family's full vaccination records, receive
+              timely SMS and email reminders, and securely share information with both their
+              children's schools and healthcare providers — all from the iOS or Android app.
+            </p>
+            <p>
+              <strong>Physicians</strong> get a dedicated portal to follow up on their patients'
+              vaccination progress, flag overdue procedures, and communicate directly with families,
+              removing the administrative back-and-forth from the consultation workflow.
+            </p>
+            <p>
+              <strong>Schools</strong> can track the immunization status of their entire student
+              body in real time, drastically reducing the manual effort involved in compliance
+              reporting and outbreak prevention.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <img src="assets/bei-phisician.png" alt="Physician portal" class="img-responsive bei-modal-img">
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer exp-modal-footer">
+        <button type="button" class="btn btn-default exp-close-btn" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('body').append($('#beimmunizedModal').detach());
+  });
+</script>
+
+<style>
+  .bei-modal-dialog {
+    width: 70%;
+    max-width: 70vw;
+  }
+  .bei-modal-body {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  .bei-modal-story {
+    background: #f0fff4;
+    border-left: 4px solid #34a853;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  .bei-story-title {
+    color: #34a853;
+    font-weight: 700;
+    margin-top: 0;
+  }
+  .bei-modal-img {
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    margin-bottom: 12px;
+  }
+  .bei-modal-platform .bei-modal-img {
+    margin-top: 4px;
+  }
+  @media (max-width: 768px) {
+    .bei-modal-dialog {
+      width: 95%;
+      max-width: 95vw;
+    }
+  }
+</style>

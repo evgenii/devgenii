@@ -24,7 +24,7 @@ App is served at `http://localhost:9292`. Assets are served from `/assets` via S
 
 ## Key Conventions
 
-- **Partials**: rendered with `<%= partial :_name %>` (sinatra-partial gem, ERB engine).
+- **Partials**: rendered with `<%= partial :name %>` or `<%= partial 'subfolder/name' %>` (sinatra-partial gem, ERB engine).
 - **CSS**: `assets/stylesheets/app.css` is the Sprockets manifest. Add new styles to `assets/stylesheets/css-app.css` or create new files and require them in `app.css`.
 - **JS**: `assets/javascripts/app.js` is the Sprockets manifest. Vendor scripts live alongside it.
 - **No test suite** — verify changes by running the server and inspecting the page.

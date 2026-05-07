@@ -1,0 +1,160 @@
+<div class="experience-slide">
+  <div class="row">
+    <div class="col-md-6 intro-pic">
+      <img src="assets/ezc-calendar.png" alt="EZCall scheduling calendar" class="img-responsive">
+    </div>
+    <div class="col-md-6 experience-content">
+      <h2>EZCall — Physician Scheduling Platform</h2>
+      <p>
+        EZCall is a rule-based scheduling platform built for clinical complexity —
+        automating call rotations, on-call assignments, and shift coverage across
+        departments, specialties, and hospital networks.
+      </p>
+      <p>
+        I led backend development and deep integrations with payroll, timekeeping,
+        and EMR systems, delivering a reliable, high-availability service trusted
+        by clinics and hospitals daily.
+      </p>
+      <button type="button" class="btn-primary" data-toggle="modal" data-target="#ezcallModal">
+        Show details
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- EZCall Details Modal -->
+<div class="modal fade" id="ezcallModal" tabindex="-1" role="dialog" aria-labelledby="ezcallModalLabel">
+  <div class="modal-dialog modal-lg ezc-modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="ezcallModalLabel">EZCall — Physician &amp; Clinical Staff Scheduling</h4>
+      </div>
+      <div class="modal-body ezc-modal-body">
+
+        <!-- Story section — highlighted -->
+        <div class="ezc-modal-story">
+          <div class="row">
+            <div class="col-sm-5">
+              <img src="assets/ezc-weekly.png" alt="EZCall weekly schedule view" class="img-responsive ezc-modal-img">
+            </div>
+            <div class="col-sm-7">
+              <h4 class="ezc-story-title">The Story</h4>
+              <p>Scheduling a nurse is one thing. Scheduling a hospital is another.</p>
+              <p>Clinical scheduling has layers that generic tools simply can't handle:</p>
+              <ul>
+                <li>call rotations that must balance fairness across dozens of physicians</li>
+                <li>subspecialty coverage requirements and contractual obligations</li>
+                <li>overnight and holiday assignments tied to payroll and compliance rules</li>
+                <li>real-time shift swaps triggered from a mobile device mid-shift</li>
+              </ul>
+              <p>
+                On EZCall I worked on the backend that made all of this reliable —
+                building integration pipelines with EMR, payroll, and timekeeping systems
+                so that a schedule change in EZCall instantly propagated across the
+                hospital's entire operational stack.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <h4>Technologies &amp; Integrations</h4>
+        <p>
+          <span class="label tech-label-rails">Ruby on Rails</span>&nbsp;
+          <span class="label tech-label-react">React.js</span>&nbsp;
+          <span class="label tech-label-typescript">TypeScript</span>&nbsp;
+          <span class="label tech-label-microservices">Microservices</span>&nbsp;
+          <span class="label tech-label-mysql">MySQL</span>&nbsp;
+          <span class="label tech-label-redis">Redis</span>&nbsp;
+          <span class="label tech-label-rabbitmq">RabbitMQ</span>&nbsp;
+          <span class="label tech-label-aws">Amazon AWS</span>&nbsp;
+          <span class="label tech-label-k8s">Kubernetes</span>&nbsp;
+          <span class="label tech-label-helm">Helm</span>&nbsp;
+          <span class="label tech-label-hl7">HL7 / EMR</span>&nbsp;
+          <span class="label tech-label-api">REST APIs</span>
+        </p>
+
+        <hr>
+
+        <h4>About the Platform</h4>
+        <div class="row ezc-modal-platform">
+          <div class="col-sm-8">
+            <p>
+              UKG EZCall® is rule-based scheduling software that automates complex
+              coverage needs — ensuring hospitals have the right people on site and
+              on call at all times. The platform serves physicians, hospitalists,
+              residents, APNs, and clinical staff across large hospital networks.
+            </p>
+            <p>
+              A centralized, enterprise-wide scheduling view gives staff and leaders
+              real-time visibility into who's working, where, and when — including
+              on-call assignments and OR coverage. Integrated messaging tools allow
+              staff to reach the right on-call provider instantly, cutting delays
+              and reducing miscommunication.
+            </p>
+            <p>
+              Mobile self-service lets providers view their schedules, swap shifts,
+              and request time off from smartphones or tablets — anytime, anywhere.
+              Configurable dashboards and reporting give management real-time insight
+              into room assignments, break coverage, and staffing equity over time.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <img src="assets/ezc-grid.png" alt="EZCall grid schedule view" class="img-responsive ezc-modal-img">
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer exp-modal-footer">
+        <button type="button" class="btn btn-default exp-close-btn" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('body').append($('#ezcallModal').detach());
+  });
+</script>
+
+<style>
+  .ezc-modal-dialog {
+    width: 70%;
+    max-width: 70vw;
+  }
+  .ezc-modal-body {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  .ezc-modal-story {
+    background: #f0faf9;
+    border-left: 4px solid #1ba8a0;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  .ezc-story-title {
+    color: #1ba8a0;
+    font-weight: 700;
+    margin-top: 0;
+  }
+  .ezc-modal-img {
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    margin-bottom: 12px;
+  }
+  .ezc-modal-platform .ezc-modal-img {
+    margin-top: 4px;
+  }
+  @media (max-width: 768px) {
+    .ezc-modal-dialog {
+      width: 95%;
+      max-width: 95vw;
+    }
+  }
+</style>

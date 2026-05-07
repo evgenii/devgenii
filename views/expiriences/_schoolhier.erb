@@ -1,0 +1,158 @@
+<div class="experience-slide">
+  <div class="row">
+    <div class="col-md-6 intro-pic">
+      <img src="assets/sh-dashboard.jpg" alt="SchoolHier" class="img-responsive">
+    </div>
+    <div class="col-md-6 experience-content">
+      <h2>SchoolHier — Booking Platform for School &amp; Sport Premises</h2>
+      <p>
+        SchoolHier is a two-sided marketplace connecting customers with venues across the UK —
+        from football pitches and swimming pools to classrooms and dance studios — handling
+        complex bookings, flexible schedules, discount rules, and split payments.
+      </p>
+      <p>
+        Working as a full-stack engineer on the core team, I contributed to back-end architecture,
+        API design, and front-end development, helping the platform grow into a leading marketplace
+        for sport and school premises in the UK.
+      </p>
+      <button type="button" class="btn-primary" data-toggle="modal" data-target="#schoolhierModal">
+        Show details
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- SchoolHier Details Modal -->
+<div class="modal fade" id="schoolhierModal" tabindex="-1" role="dialog" aria-labelledby="schoolhierModalLabel">
+  <div class="modal-dialog modal-lg schoolhier-modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="schoolhierModalLabel">SchoolHier — Booking Platform for School &amp; Sport Premises</h4>
+      </div>
+      <div class="modal-body schoolhier-modal-body">
+
+        <!-- Story section — highlighted -->
+        <div class="sh-modal-story">
+          <div class="row">
+            <div class="col-sm-5">
+              <img src="assets/sh-map.png" alt="UK facility map" class="img-responsive sh-modal-img">
+            </div>
+            <div class="col-sm-7">
+              <h4 class="sh-story-title">The Story</h4>
+              <p>Sometimes booking is simple. 1-2-3 and you are done.</p>
+              <p>But what if:</p>
+              <ul>
+                <li>people will make bookings for 6 months with a complex schedule to run lessons</li>
+                <li>venue organisations propose discounts for various groups</li>
+                <li>a refund in a complex booking is requested, or</li>
+                <li>we need to allow partial or split payments</li>
+              </ul>
+              <p>
+                On these and many other tricky questions we had to answer on this project to help it
+                become a leading marketplace of sport and school premises in the UK.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <h4>Technologies &amp; Integrations</h4>
+        <p>
+          <span class="label tech-label-rails">Ruby on Rails</span>&nbsp;
+          <span class="label tech-label-react">React.js</span>&nbsp;
+          <span class="label tech-label-k8s">Kubernetes</span>&nbsp;
+          <span class="label tech-label-docker">Docker</span>&nbsp;
+          <span class="label tech-label-cicd">CI/CD</span>&nbsp;
+          <span class="label tech-label-aws">Amazon AWS</span>&nbsp;
+          <span class="label tech-label-stripe">Stripe</span>
+        </p>
+
+        <hr>
+
+        <h4>About the Platform</h4>
+        <div class="row sh-modal-platform">
+          <div class="col-sm-8">
+            <p>
+              The solution advertises facilities across the UK that are available for hire. Whether you
+              are looking for a swimming pool for a birthday party, a football pitch for your local team,
+              a classroom for your business, or a dance studio for your clients — the platform will find
+              the facility you require.
+            </p>
+            <p>
+              The site has been built as a two-sided marketplace bringing together customers and venues
+              in a more efficient and streamlined way. Each customer and venue can manage their account
+              to complete the required actions to either make or accept bookings.
+            </p>
+            <p>
+              As a customer you can send a booking request directly to a venue, having first seen all
+              information relating to the facility (availability, cost, size, etc.). The booking request
+              includes all the details required by the venue for approval. The bookings section allows
+              you to review all current bookings, view invoices, message the venue, and handle any
+              required actions (e.g. retract a booking request, request a cancellation, or modify a booking).
+            </p>
+            <p>
+              The focus for each venue is to help increase revenue while decreasing the time spent on
+              lettings due to inefficiencies and manual processes in the current system. All features
+              have been designed with revenue and efficiency savings in mind.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <img src="assets/sh-order.png" alt="Booking order view" class="img-responsive sh-modal-img">
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer exp-modal-footer">
+        <button type="button" class="btn btn-default exp-close-btn" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('body').append($('#schoolhierModal').detach());
+  });
+</script>
+
+<style>
+  .schoolhier-modal-dialog {
+    width: 70%;
+    max-width: 70vw;
+  }
+  .schoolhier-modal-body {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  /* modal-dialog and modal-body sizing kept here; shared chrome lives in css-app.css */
+  .sh-modal-story {
+    background: #f0f8ff;
+    border-left: 4px solid #3eb0f7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  .sh-story-title {
+    color: #3eb0f7;
+    font-weight: 700;
+    margin-top: 0;
+  }
+  .sh-modal-img {
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    margin-bottom: 12px;
+  }
+  .sh-modal-platform .sh-modal-img {
+    margin-top: 4px;
+  }
+  @media (max-width: 768px) {
+    .schoolhier-modal-dialog {
+      width: 95%;
+      max-width: 95vw;
+    }
+  }
+</style>

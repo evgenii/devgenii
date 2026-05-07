@@ -42,6 +42,30 @@ $(document).ready(function() {
     singleItem:true
   });
 
+  /* experience carousel */
+  // Move modals, scripts, and styles out of the carousel before init so that
+  // Owl Carousel only counts .experience-slide divs as items.
+  $("#experience-carousel").children(":not(.experience-slide)").appendTo("body");
+
+  var $experienceCarousel = $("#experience-carousel");
+  $experienceCarousel.owlCarousel({
+    singleItem: true,
+    navigation: false,
+    pagination: false,
+    slideSpeed: 400,
+    autoHeight: true,
+    afterAction: function() {
+      var currentIndex = this.currentItem;
+      $(".experience-nav-item").removeClass("active");
+      $(".experience-nav-item[data-slide='" + currentIndex + "']").addClass("active");
+    }
+  });
+
+  $(".experience-nav-item").on("click", function() {
+    var slideIndex = parseInt($(this).data("slide"), 10);
+    $experienceCarousel.trigger("owl.goTo", slideIndex);
+  });
+
   /* sticky navigation */
   $("#menu").sticky({topSpacing:0});
 });
