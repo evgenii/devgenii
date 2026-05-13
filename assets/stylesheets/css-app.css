@@ -22,7 +22,7 @@ body {
 	position: relative;
 }
 h1 { font-size: 3em; line-height:1.2em; margin:0 0 .8em; }
-h2 { font-size: 1.8em; line-height:1.4em; margin:0 0 .8em;  }
+h2 { font-size: 1.8em; line-height:1.4em; margin:0 0 .8em; font-weight: 300; }
 h3 { font-size: 1.4em; line-height:1.4em; }
 h4 { font-size: 1.25em; line-height:1.4em;}
 h5 { font-size: 1.1em; line-height:1.4em; }
@@ -293,6 +293,7 @@ a:hover {
 .tech-label-microservices { background-color: #9c27b0; color: #fff; }
 .tech-label-mobile       { background-color: #34a853; color: #fff; }
 .tech-label-sphinx       { background-color: #e67e22; color: #fff; }
+.pet-projects            { background-color: #2496ed; color: #fff; vertical-align: down; font-size: 30%; }
 
 /* Shared experience modal chrome */
 .exp-modal-dialog {
@@ -660,6 +661,114 @@ a:hover {
 	margin: 10px 0 0 17px;
 	font-size: 40px;
 }
+/* /.pet-projects section */
+#pet-projects {
+  padding: 100px 0 80px;
+  background: #fff;
+}
+#pet-projects h2 {
+  margin: 10px 0 15px;
+  font-size: 40px;
+}
+#pet-projects .feature-title p {
+  font-size: 18px;
+}
+.pet-project-intro {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.pet-project-logo {
+  display: inline-block;
+  margin-bottom: 25px;
+  border: 2px solid #e8e8e8;
+  border-radius: 20px;
+  padding: 20px;
+}
+.pet-project-logo img {
+  max-height: 320px;
+  width: auto;
+}
+.progress-title {
+  margin-top: 70px;
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 40px;
+  color: #444;
+}
+.pet-project-phases {
+  margin-top: 0;
+}
+.phase-block {
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  padding: 30px 25px 25px;
+  margin-bottom: 30px;
+  height: 100%;
+  -webkit-transition: box-shadow .3s ease;
+  transition: box-shadow .3s ease;
+}
+.phase-block:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.phase-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+.phase-header i {
+  font-size: 32px;
+  color: #3eb0f7;
+  flex-shrink: 0;
+}
+.phase-header h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+}
+.phase-tasks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.phase-tasks li {
+  padding: 8px 0;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.phase-tasks li:last-child {
+  border-bottom: none;
+}
+.task-done {
+  color: #5cb85c;
+}
+.task-done i {
+  color: #5cb85c;
+}
+.task-active {
+  color: #3eb0f7;
+  font-weight: 400;
+}
+.task-active i {
+  color: #3eb0f7;
+}
+.task-pending {
+  color: #aaa;
+}
+.task-pending i {
+  color: #ccc;
+}
+
 #footer {
 	background: #fff;
 	padding: 50px 0 50px;
