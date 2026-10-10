@@ -2,7 +2,7 @@ service: devgenii-visit
 image: devapps/devgenii-visit
 
 servers:
-  - evgenii.scw.devapps
+  - evgenii.scw.prod
 
 proxy:
   ssl:

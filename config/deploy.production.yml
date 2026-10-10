@@ -1,7 +1,7 @@
 image: devapps/devgenii-visit-prod
 
 servers:
-  - evgenii.scw.devapps
+  - evgenii.scw.prod
 
 proxy:
   host: devgenii.com.ua
